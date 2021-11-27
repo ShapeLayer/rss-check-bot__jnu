@@ -1,0 +1,32 @@
+{
+  "KEY": "",
+  "get_notice_limit": 7,
+  "target_name": {
+    "eng": "공과대학",
+    "ece": "전자컴퓨터공학부",
+    "ce": "컴퓨터정보통신공학과"
+  },
+  "target_host": {
+    "eng": "https://eng.jnu.ac.kr",
+    "ece": "https://website.jnu.ac.kr/user/indexMain.action?siteId=ece",
+    "ce": "https://ce.jnu.ac.kr"
+  },
+  "target_rss": {
+    "eng": {
+      "url": "https://eng.jnu.ac.kr/bbs/eng/993/rssList.do?row={}",
+      "format": "now"
+    },
+    "ece": {
+      "url": "http://website.jnu.ac.kr/rssList.jsp?siteId=ece&boardId=217?row={}",
+      "format": "legacy"
+    },
+    "ce": {
+      "url": "https://ce.jnu.ac.kr/bbs/ce/2114/rssList.do?row={}",
+      "format": "now"
+    }
+  },
+  "discord": {
+    "eng": 914043337466593280,
+    "ce": 914043193325142076
+  }
+}
