@@ -43,7 +43,7 @@ async def send_update(boardcode, channelid):
         embed = discord.Embed(
             title = update['title'],
             type = 'rich',
-            description = update['description'],
+            description = update['description'] if 'description' in update else '',
             url = update['link'] if CONFIG['targets'][boardcode]['format'] != 'default' else CONFIG['targets'][boardcode]['host'] + update['link']
         )
         await client.get_channel(channelid).send(embed=embed)
