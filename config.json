@@ -1,32 +1,41 @@
 {
   "KEY": "",
   "get_notice_limit": 7,
-  "target_name": {
-    "eng": "공과대학",
-    "ece": "전자컴퓨터공학부",
-    "ce": "컴퓨터정보통신공학과"
-  },
-  "target_host": {
-    "eng": "https://eng.jnu.ac.kr",
-    "ece": "https://website.jnu.ac.kr/user/indexMain.action?siteId=ece",
-    "ce": "https://ce.jnu.ac.kr"
-  },
-  "target_rss": {
-    "eng": {
-      "url": "https://eng.jnu.ac.kr/bbs/eng/993/rssList.do?row={}",
-      "format": "now"
+  "targets": {
+    "cba": {
+      "name": "경영대학",
+      "host": "https://cba.jnu.ac.kr",
+      "rss": "https://cba.jnu.ac.kr/bbs/cba/1615/rssList.do?row={}",
+      "refactor": true,
+      "discord": 914066402472775710
     },
-    "ece": {
-      "url": "http://website.jnu.ac.kr/rssList.jsp?siteId=ece&boardId=217?row={}",
-      "format": "legacy"
+    "biz": {
+      "name": "경영학부",
+      "host": "https://biz.jnu.ac.kr",
+      "rss": "https://biz.jnu.ac.kr/bbs/biz/2245/rssList.do?row={}",
+      "refactor": true,
+      "discord": 914066468105244713
+    },
+    "eco": {
+      "name": "경제학부",
+      "host": "https://eco.jnu.ac.kr",
+      "rss": "https://eco.jnu.ac.kr/bbs/eco/1845/rssList.do?row={}",
+      "refactor": true,
+      "discord": 914067768318509057
+    },
+    "eng": {
+      "name": "공과대학",
+      "host": "https://eng.jnu.ac.kr",
+      "rss": "https://eng.jnu.ac.kr/bbs/eng/993/rssList.do?row={}",
+      "refactor": true,
+      "discord": 914043337466593280
     },
     "ce": {
-      "url": "https://ce.jnu.ac.kr/bbs/ce/2114/rssList.do?row={}",
-      "format": "now"
+      "name": "컴퓨터정보통신공학과",
+      "host": "https://ce.jnu.ac.kr",
+      "rss": "https://ce.jnu.ac.kr/bbs/ce/2114/rssList.do?row={}",
+      "refactor": true,
+      "discord": 914043193325142076
     }
-  },
-  "discord": {
-    "eng": 914043337466593280,
-    "ce": 914043193325142076
   }
 }

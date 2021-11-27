@@ -15,7 +15,7 @@ CONFIG = loads(open('config.json', encoding='utf-8').read())
 client = discord.Client()
 
 def get_rss(target, row = CONFIG['get_notice_limit'], mode='n') -> dict:
-    res = requests.get(CONFIG['target_rss'][target]['url'].format(row), headers = {'User-Agent': 'Mozilla/5.0'})
+    res = requests.get(CONFIG['targets'][target]['rss'].format(row), headers = {'User-Agent': 'Mozilla/5.0'})
     if not res.status_code == 200:
         return
     tree = xmltodict.parse(res.text)
@@ -44,14 +44,14 @@ async def send_update(boardcode, channelid):
             title = update['title'],
             type = 'rich',
             description = update['description'],
-            url = update['link'] if CONFIG['target_rss'][boardcode]['format'] == 'legacy' else CONFIG['target_host'][boardcode] + update['link']
+            url = update['link'] if not CONFIG['targets'][boardcode]['refactor'] else CONFIG['targets'][boardcode]['host'] + update['link']
         )
         await client.get_channel(channelid).send(embed=embed)
 
 @client.event
 async def on_ready():
-    for board in args.channel if args.channel else CONFIG['discord'].keys():
-        await send_update(board, CONFIG['discord'][board])
+    for board in args.channel if args.channel else CONFIG['targets'].keys():
+        await send_update(board, CONFIG['targets'][board]['discord'])
     await client.close()
 
 if __name__ == '__main__':
