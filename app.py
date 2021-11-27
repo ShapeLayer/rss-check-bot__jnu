@@ -44,7 +44,7 @@ async def send_update(boardcode, channelid):
             title = update['title'],
             type = 'rich',
             description = update['description'],
-            url = update['link'] if not CONFIG['targets'][boardcode]['refactor'] else CONFIG['targets'][boardcode]['host'] + update['link']
+            url = update['link'] if CONFIG['targets'][boardcode]['format'] != 'default' else CONFIG['targets'][boardcode]['host'] + update['link']
         )
         await client.get_channel(channelid).send(embed=embed)
 

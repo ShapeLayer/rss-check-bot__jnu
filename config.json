@@ -2,40 +2,614 @@
   "KEY": "",
   "get_notice_limit": 7,
   "targets": {
+    "sdis": {
+      "name": "자율전공학부",
+      "host": "https://sdis.jnu.ac.kr",
+      "rss": "https://sdis.jnu.ac.kr/bbs/sdis/247/rssList.do?row={}",
+      "format": "default",
+      "discord": 914134863915937792
+    },
+    "nursing": {
+      "name": "간호대학",
+      "host": "https://nursing.jnu.ac.kr",
+      "rss": "https://nursing.jnu.ac.kr/bbs/nursing/553/rssList.do?row={}",
+      "format": "default",
+      "discord": 914134920429961236
+    },
     "cba": {
       "name": "경영대학",
       "host": "https://cba.jnu.ac.kr",
       "rss": "https://cba.jnu.ac.kr/bbs/cba/1615/rssList.do?row={}",
-      "refactor": true,
+      "format": "default",
       "discord": 914066402472775710
     },
     "biz": {
       "name": "경영학부",
       "host": "https://biz.jnu.ac.kr",
       "rss": "https://biz.jnu.ac.kr/bbs/biz/2245/rssList.do?row={}",
-      "refactor": true,
+      "format": "default",
       "discord": 914066468105244713
     },
     "eco": {
       "name": "경제학부",
       "host": "https://eco.jnu.ac.kr",
       "rss": "https://eco.jnu.ac.kr/bbs/eco/1845/rssList.do?row={}",
-      "refactor": true,
+      "format": "default",
       "discord": 914067768318509057
     },
     "eng": {
       "name": "공과대학",
       "host": "https://eng.jnu.ac.kr",
       "rss": "https://eng.jnu.ac.kr/bbs/eng/993/rssList.do?row={}",
-      "refactor": true,
+      "format": "default",
       "discord": 914043337466593280
+    },
+    "archi": {
+      "name": "건축학부",
+      "host": "https://archi.jnu.ac.kr",
+      "rss": "https://archi.jnu.ac.kr/bbs/archi/1035/rssList.do?row={}",
+      "format": "default",
+      "discord": 914135010007724082
+    },
+    "pf": {
+      "name": "고분자융합소재공학부",
+      "host": "https://pf.jnu.ac.kr",
+      "rss": "https://pf.jnu.ac.kr/bbs/pf/997/rssList.do?row={}",
+      "format": "default",
+      "discord": 914135078391676938
+    },
+    "mech": {
+      "name": "기계공학부",
+      "host": "https://mech.jnu.ac.kr",
+      "rss": "https://mech.jnu.ac.kr/bbs/mech/2038/rssList.do?row={}",
+      "format": "default",
+      "discord": 914135124038254602
+    },
+    "bte": {
+      "name": "생물공학과",
+      "host": "https://bte.jnu.ac.kr",
+      "rss": "https://bte.jnu.ac.kr/bbs/bte/1824/rssList.do?row={}",
+      "format": "default",
+      "discord": 914135185711300608
+    },
+    "resources": {
+      "name": "에너지자원공학과",
+      "host": "https://resources.jnu.ac.kr",
+      "rss": "https://resources.jnu.ac.kr/bbs/resources/1194/rssList.do?row={}",
+      "format": "default",
+      "discord": 914135283124027392
+    },
+    "ace": {
+      "name": "화학공학과",
+      "host": "https://ace.jnu.ac.kr",
+      "rss": "https://ace.jnu.ac.kr/bbs/ace/1860/rssList.do?row={}",
+      "format": "default",
+      "discord": 914135388703059989
+    },
+    "elec": {
+      "name": "전기공학과",
+      "host": "https://elec.jnu.ac.kr",
+      "rss": "https://elec.jnu.ac.kr/bbs/elec/1204/rssList.do?row={}",
+      "format": "default",
+      "discord": 914135443321258024
+    },
+    "ee": {
+      "name": "전자공학과",
+      "host": "https://ee.jnu.ac.kr",
+      "rss": "https://ee.jnu.ac.kr/bbs/ee/1856/rssList.do?row={}",
+      "format": "default",
+      "discord": 914135509834559508
     },
     "ce": {
       "name": "컴퓨터정보통신공학과",
       "host": "https://ce.jnu.ac.kr",
       "rss": "https://ce.jnu.ac.kr/bbs/ce/2114/rssList.do?row={}",
-      "refactor": true,
+      "format": "default",
       "discord": 914043193325142076
+    },
+    "sw": {
+      "name": "소프트웨어공학과",
+      "host": "https://sw.jnu.ac.kr",
+      "rss": "https://sw.jnu.ac.kr/bbs/sw/1038/rssList.do?row={}",
+      "format": "default",
+      "discord": 914135584782565406
+    },
+    "civil": {
+      "name": "토목공학과",
+      "host": "https://civil.jnu.ac.kr",
+      "rss": "https://civil.jnu.ac.kr/bbs/civil/1829/rssList.do?row={}",
+      "format": "default",
+      "discord": 914135643100184587
+    },
+    "eee": {
+      "name": "환경에너지공학과",
+      "host": "https://eee.jnu.ac.kr",
+      "rss": "https://eee.jnu.ac.kr/bbs/eee/1834/rssList.do?row={}",
+      "format": "default",
+      "discord": 914135692047700019
+    },
+    "agric": {
+      "name": "농업생명과학대학",
+      "host": "https://agric.jnu.ac.kr",
+      "rss": "https://agric.jnu.ac.kr/bbs/agric/420/rssList.do?row={}",
+      "format": "default",
+      "discord": 914135770305028156
+    },
+    "agro": {
+      "name": "응용식물학과",
+      "host": "https://agro.jnu.ac.kr",
+      "rss": "https://agro.jnu.ac.kr/bbs/agro/444/rssList.do?row={}",
+      "format": "default",
+      "discord": 914135830455521300
+    },
+    "hort": {
+      "name": "원예생명공학과",
+      "host": "https://hort.jnu.ac.kr",
+      "rss": "https://hort.jnu.ac.kr/bbs/hort/441/rssList.do?row={}",
+      "format": "default",
+      "discord": 914135892891938816
+    },
+    "agribio": {
+      "name": "응용생물학과",
+      "host": "https://agribio.jnu.ac.kr",
+      "rss": "https://agribio.jnu.ac.kr/bbs/agribio/640/rssList.do?row={}",
+      "format": "default",
+      "discord": 914135940979621938
+    },
+    "forestry": {
+      "name": "산림자원학과",
+      "host": "https://forestry.jnu.ac.kr",
+      "rss": "https://forestry.jnu.ac.kr/bbs/forestry/436/rssList.do?row={}",
+      "format": "default",
+      "discord": 914135987687391282
+    },
+    "wood": {
+      "name": "임산공학과",
+      "host": "https://wood.jnu.ac.kr",
+      "rss": "https://wood.jnu.ac.kr/bbs/wood/647/rssList.do?row={}",
+      "format": "default",
+      "discord": 914136023850688633
+    },
+    "agrochem": {
+      "name": "농생명화학과",
+      "host": "https://agrochem.jnu.ac.kr",
+      "rss": "https://agrochem.jnu.ac.kr/bbs/agrochem/555/rssList.do?row={}",
+      "format": "default",
+      "discord": 914136071221166111
+    },
+    "foodsci": {
+      "name": "식품공학과",
+      "host": "https://foodsci.jnu.ac.kr",
+      "rss": "https://foodsci.jnu.ac.kr/bbs/foodsci/678/rssList.do?row={}",
+      "format": "default",
+      "discord": 914136121951260682
+    },
+    "mimb": {
+      "name": "분자생명공학과",
+      "host": "https://mimb.jnu.ac.kr",
+      "rss": "https://mimb.jnu.ac.kr/bbs/mimb/560/rssList.do?row={}",
+      "format": "default",
+      "discord": 914136169619529768
+    },
+    "animalscience": {
+      "name": "동물자원학부",
+      "host": "https://animalscience.jnu.ac.kr",
+      "rss": "https://animalscience.jnu.ac.kr/bbs/animalscience/435/rssList.do?row={}",
+      "format": "default",
+      "discord": 914136232664117259
+    },
+    "rbe": {
+      "name": "지역바이오시스템공학과",
+      "host": "https://rbe.jnu.ac.kr",
+      "rss": "https://rbe.jnu.ac.kr/bbs/rbe/447/rssList.do?row={}",
+      "format": "default",
+      "discord": 914136512881389609
+    },
+    "ae": {
+      "name": "농업경제학과",
+      "host": "https://ae.jnu.ac.kr",
+      "rss": "https://ae.jnu.ac.kr/bbs/ae/430/rssList.do?row={}",
+      "format": "default",
+      "discord": 914136560813899786
+    },
+    "jnula": {
+      "name": "조경학과",
+      "host": "https://jnula.jnu.ac.kr",
+      "rss": "https://jnula.jnu.ac.kr/bbs/jnula/655/rssList.do?row={}",
+      "format": "default",
+      "discord": 914136827600969739
+    },
+    "education": {
+      "name": "사범대학",
+      "host": "https://education.jnu.ac.kr",
+      "rss": "https://education.jnu.ac.kr/bbs/education/2275/rssList.do?row={}",
+      "format": "default",
+      "discord": 914136871007817818
+    },
+    "koredu": {
+      "name": "국어교육과",
+      "host": "https://koredu.jnu.ac.kr",
+      "rss": "https://koredu.jnu.ac.kr/bbs/koredu/2290/rssList.do?row={}",
+      "format": "default",
+      "discord": 914136904281235456
+    },
+    "engedu": {
+      "name": "영어교육과",
+      "host": "https://engedu.jnu.ac.kr",
+      "rss": "https://engedu.jnu.ac.kr/bbs/engedu/2295/rssList.do?row={}",
+      "format": "default",
+      "discord": 914136928754999326
+    },
+    "educate": {
+      "name": "교육학과",
+      "host": "https://educate.jnu.ac.kr",
+      "rss": "https://educate.jnu.ac.kr/bbs/educate/2285/rssList.do?row={}",
+      "format": "default",
+      "discord": 914136945855193130
+    },
+    "ecedu": {
+      "name": "유아교육과",
+      "host": "https://ecedu.jnu.ac.kr",
+      "rss": "https://ecedu.jnu.ac.kr/bbs/ecedu/2303/rssList.do?row={}",
+      "format": "default",
+      "discord": 914136968911265802
+    },
+    "geoedu": {
+      "name": "지리교육과",
+      "host": "https://geoedu.jnu.ac.kr",
+      "rss": "https://geoedu.jnu.ac.kr/bbs/geoedu/2301/rssList.do?row={}",
+      "format": "default",
+      "discord": 914136989861818369
+    },
+    "hisedu": {
+      "name": "역사교육과",
+      "host": "https://hisedu.jnu.ac.kr",
+      "rss": "https://hisedu.jnu.ac.kr/bbs/hisedu/2296/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137009721868298
+    },
+    "ethicsedu": {
+      "name": "윤리교육과",
+      "host": "https://ethicsedu.jnu.ac.kr",
+      "rss": "https://ethicsedu.jnu.ac.kr/bbs/ethicsedu/2304/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137035336462336
+    },
+    "mathedu": {
+      "name": "수학교육과",
+      "host": "https://mathedu.jnu.ac.kr",
+      "rss": "https://mathedu.jnu.ac.kr/bbs/mathedu/2306/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137051501301770
+    },
+    "physicsedu": {
+      "name": "물리교육과",
+      "host": "https://physicsedu.jnu.ac.kr",
+      "rss": "https://physicsedu.jnu.ac.kr/bbs/physicsedu/2307/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137070971273216
+    },
+    "chemedu": {
+      "name": "화학교육과",
+      "host": "https://chemedu.jnu.ac.kr",
+      "rss": "https://chemedu.jnu.ac.kr/bbs/chemedu/2309/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137088608321576
+    },
+    "bioedu": {
+      "name": "생물교육과",
+      "host": "https://bioedu.jnu.ac.kr",
+      "rss": "https://bioedu.jnu.ac.kr/bbs/bioedu/2311/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137100876664862
+    },
+    "earthedu": {
+      "name": "지구과학교육과",
+      "host": "https://earthedu.jnu.ac.kr",
+      "rss": "https://earthedu.jnu.ac.kr/bbs/earthedu/2316/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137122829631508
+    },
+    "musicedu": {
+      "name": "음악교육과",
+      "host": "https://musicedu.jnu.ac.kr",
+      "rss": "https://musicedu.jnu.ac.kr/bbs/musicedu/2319/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137147773173800
+    },
+    "physicaledu": {
+      "name": "체육교육과",
+      "host": "https://physicaledu.jnu.ac.kr",
+      "rss": "https://physicaledu.jnu.ac.kr/bbs/physicaledu/2320/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137198998200350
+    },
+    "spededu": {
+      "name": "특수교육학부",
+      "host": "https://spededu.jnu.ac.kr",
+      "rss": "https://spededu.jnu.ac.kr/bbs/spededu/2321/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137464849961001
+    },
+    "politics": {
+      "name": "정치외교학과",
+      "host": "https://politics.jnu.ac.kr",
+      "rss": "https://politics.jnu.ac.kr/bbs/politics/1771/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137520659386389
+    },
+    "sociology": {
+      "name": "사회학과",
+      "host": "https://sociology.jnu.ac.kr",
+      "rss": "https://sociology.jnu.ac.kr/bbs/sociology/1001/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137551479111691
+    },
+    "psyche": {
+      "name": "심리학과",
+      "host": "https://psyche.jnu.ac.kr",
+      "rss": "https://psyche.jnu.ac.kr/bbs/psyche/1004/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137577248919562
+    },
+    "comm": {
+      "name": "신문방송학과",
+      "host": "https://comm.jnu.ac.kr",
+      "rss": "https://comm.jnu.ac.kr/bbs/comm/1003/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137592998555668
+    },
+    "geo": {
+      "name": "지리학과",
+      "host": "https://geo.jnu.ac.kr",
+      "rss": "https://geo.jnu.ac.kr/bbs/geo/1868/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137614804717578
+    },
+    "illyu": {
+      "name": "문화인류고고학과",
+      "host": "https://illyu.jnu.ac.kr",
+      "rss": "https://illyu.jnu.ac.kr/bbs/illyu/1866/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137629719662652
+    },
+    "jnupa": {
+      "name": "행정학과",
+      "host": "https://jnupa.jnu.ac.kr",
+      "rss": "https://jnupa.jnu.ac.kr/bbs/jnupa/1731/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137648937971753
+    },
+    "humanecology": {
+      "name": "생활과학대학",
+      "host": "https://humanecology.jnu.ac.kr",
+      "rss": "https://humanecology.jnu.ac.kr/bbs/humanecology/1870/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137678004494357
+    },
+    "welfare": {
+      "name": "생활복지학과",
+      "host": "https://welfare.jnu.ac.kr",
+      "rss": "https://welfare.jnu.ac.kr/bbs/welfare/1702/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137697826775100
+    },
+    "fn": {
+      "name": "식품영양과학부",
+      "host": "https://fn.jnu.ac.kr",
+      "rss": "https://fn.jnu.ac.kr/bbs/fn/1139/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137717695213648
+    },
+    "clothing": {
+      "name": "의류학과",
+      "host": "https://clothing.jnu.ac.kr",
+      "rss": "https://clothing.jnu.ac.kr/bbs/clothing/1006/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137742298996766
+    },
+    "vetmed": {
+      "name": "수의과대학",
+      "host": "https://vetmed.jnu.ac.kr",
+      "rss": "https://vetmed.jnu.ac.kr/bbs/vetmed/1874/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137762859458610
+    },
+    "pharmacy": {
+      "name": "약학대학",
+      "host": "https://pharmacy.jnu.ac.kr",
+      "rss": "https://pharmacy.jnu.ac.kr/bbs/pharmacy/975/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137784304951316
+    },
+    "arts": {
+      "name": "예술대학",
+      "host": "https://arts.jnu.ac.kr",
+      "rss": "https://arts.jnu.ac.kr/bbs/arts/2215/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137798494281729
+    },
+    "fineart": {
+      "name": "미술학과",
+      "host": "https://fineart.jnu.ac.kr",
+      "rss": "https://fineart.jnu.ac.kr/bbs/fineart/1009/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137821722337313
+    },
+    "music": {
+      "name": "음악학과",
+      "host": "https://music.jnu.ac.kr",
+      "rss": "https://music.jnu.ac.kr/bbs/music/1656/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137937434779658
+    },
+    "koreanmusic": {
+      "name": "국악학과",
+      "host": "https://koreanmusic.jnu.ac.kr",
+      "rss": "https://koreanmusic.jnu.ac.kr/bbs/koreanmusic/1224/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137954702721105
+    },
+    "design": {
+      "name": "디자인학과",
+      "host": "https://design.jnu.ac.kr",
+      "rss": "https://design.jnu.ac.kr/bbs/design/1007/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137973258334218
+    },
+    "human": {
+      "name": "인문대학",
+      "host": "https://human.jnu.ac.kr",
+      "rss": "https://human.jnu.ac.kr/bbs/human/1819/rssList.do?row={}",
+      "format": "default",
+      "discord": 914137998382231552
+    },
+    "korean": {
+      "name": "국어국문학과",
+      "host": "https://korean.jnu.ac.kr",
+      "rss": "https://korean.jnu.ac.kr/bbs/korean/1637/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138017961226292
+    },
+    "ell": {
+      "name": "영어영문학과",
+      "host": "https://ell.jnu.ac.kr",
+      "rss": "https://ell.jnu.ac.kr/bbs/ell/1592/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138032305754203
+    },
+    "german": {
+      "name": "독일언어문학과",
+      "host": "https://german.jnu.ac.kr",
+      "rss": "https://german.jnu.ac.kr/bbs/german/1630/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138049049419828
+    },
+    "french": {
+      "name": "불어불문학과",
+      "host": "https://french.jnu.ac.kr",
+      "rss": "https://french.jnu.ac.kr/bbs/french/2189/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138071996465162
+    },
+    "china": {
+      "name": "중어중문학과",
+      "host": "https://china.jnu.ac.kr",
+      "rss": "https://china.jnu.ac.kr/bbs/china/1570/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138089708998676
+    },
+    "nihon": {
+      "name": "일어일문학과",
+      "host": "https://nihon.jnu.ac.kr",
+      "rss": "https://nihon.jnu.ac.kr/bbs/nihon/1578/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138102191255562
+    },
+    "history": {
+      "name": "사학과",
+      "host": "https://history.jnu.ac.kr",
+      "rss": "https://history.jnu.ac.kr/bbs/history/1604/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138123523461172
+    },
+    "philos": {
+      "name": "철학과",
+      "host": "https://philos.jnu.ac.kr",
+      "rss": "https://philos.jnu.ac.kr/bbs/philos/2261/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138133405261846
+    },
+    "natural": {
+      "name": "자연과학대학",
+      "host": "https://natural.jnu.ac.kr",
+      "rss": "https://natural.jnu.ac.kr/bbs/natural/1560/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138164875104267
+    },
+    "math": {
+      "name": "수학과",
+      "host": "https://math.jnu.ac.kr",
+      "rss": "https://math.jnu.ac.kr/bbs/math/2076/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138184915517450
+    },
+    "stat": {
+      "name": "통계학과",
+      "host": "https://stat.jnu.ac.kr",
+      "rss": "https://stat.jnu.ac.kr/bbs/stat/1511/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138199524266004
+    },
+    "physics": {
+      "name": "물리학과",
+      "host": "https://physics.jnu.ac.kr",
+      "rss": "https://physics.jnu.ac.kr/bbs/physics/2140/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138208642666550
+    },
+    "geology": {
+      "name": "지구환경과학부 지질환경전공",
+      "host": "https://geology.jnu.ac.kr",
+      "rss": "https://geology.jnu.ac.kr/bbs/geology/1519/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138252808708136
+    },
+    "oceanography": {
+      "name": "지구환경과학부 해양환경전공",
+      "host": "https://oceanography.jnu.ac.kr",
+      "rss": "https://oceanography.jnu.ac.kr/bbs/oceanography/2041/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138266113028097
+    },
+    "chem": {
+      "name": "화학과",
+      "host": "https://chem.jnu.ac.kr",
+      "rss": "https://chem.jnu.ac.kr/bbs/chem/1013/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138285796905042
+    },
+    "biology": {
+      "name": "생물학과",
+      "host": "https://biology.jnu.ac.kr",
+      "rss": "https://biology.jnu.ac.kr/bbs/biology/2113/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138298149122089
+    },
+    "sbst": {
+      "name": "생명과학기술학부",
+      "host": "https://sbst.jnu.ac.kr",
+      "rss": "https://sbst.jnu.ac.kr/bbs/sbst/1522/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138322534817802
+    },
+    "cvg": {
+      "name": "AI융합대학",
+      "host": "https://cvg.jnu.ac.kr",
+      "rss": "https://cvg.jnu.ac.kr/bbs/cvg/405/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138420144644096
+    },
+    "aisw": {
+      "name": "인공지능학부",
+      "host": "https://aisw.jnu.ac.kr",
+      "rss": "https://aisw.jnu.ac.kr/bbs/aisw/64/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138440717713459
+    },
+    "bigdata": {
+      "name": "빅데이터융합학과",
+      "host": "https://bigdata.jnu.ac.kr",
+      "rss": "https://bigdata.jnu.ac.kr/bbs/bigdata/74/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138467796148254
+    },
+    "imob": {
+      "name": "지능형모빌리티융합학과",
+      "host": "https://imob.jnu.ac.kr",
+      "rss": "https://imob.jnu.ac.kr/bbs/imob/69/rssList.do?row={}",
+      "format": "default",
+      "discord": 914138489329692672
     }
   }
 }
