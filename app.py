@@ -4,6 +4,7 @@ from json import dumps, loads
 import discord
 from datetime import datetime, timezone, timedelta
 import argparse
+from os import getenv
 
 parser = argparse.ArgumentParser(description='JNU notice observer')
 parser.add_argument('--channel', type=str, default=None, action='append', help='Specific channel to observe. (str)')
@@ -54,4 +55,4 @@ async def on_ready():
     await client.close()
 
 if __name__ == '__main__':
-    client.run(CONFIG['KEY'])
+    client.run(CONFIG['KEY'] if CONFIG['KEY'] else getenv('discord_key'))
