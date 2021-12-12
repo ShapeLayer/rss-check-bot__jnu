@@ -15,6 +15,7 @@ CONFIG = loads(open('config.json', encoding='utf-8').read())
 client = discord.Client()
 
 def get_rss(target, row = CONFIG['get_notice_limit'], mode='n') -> dict:
+    print('Called `get_rss` ({})'.format(target))
     res = requests.get(CONFIG['targets'][target]['rss'].format(row), headers = {'User-Agent': 'Mozilla/5.0'})
     if not res.status_code == 200:
         return
@@ -25,6 +26,7 @@ def get_rss(target, row = CONFIG['get_notice_limit'], mode='n') -> dict:
     return tree
 
 def check_update(target: str, limit = CONFIG['get_notice_limit']) -> list:
+    print('Called `check_update` ({})'.format(target))
     now = datetime.now(timezone(timedelta(hours=9)))
     dict_ = get_rss(target, limit)
     if not dict_:
@@ -38,6 +40,7 @@ def check_update(target: str, limit = CONFIG['get_notice_limit']) -> list:
     return content
 
 async def send_update(boardcode, channelid):
+    print('Called `send_update` ({})'.format(boardcode))
     updates = check_update(boardcode)
     for update in updates:
         embed = discord.Embed(
@@ -50,8 +53,10 @@ async def send_update(boardcode, channelid):
 
 @client.event
 async def on_ready():
+    print('Login done.')
     for board in args.channel if args.channel else CONFIG['targets'].keys():
         await send_update(board, CONFIG['targets'][board]['discord'])
+    print('Close session.')
     await client.close()
 
 if __name__ == '__main__':
