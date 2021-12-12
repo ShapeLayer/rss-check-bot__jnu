@@ -53,7 +53,10 @@ async def send_update(boardcode, channelid):
 
 @client.event
 async def on_ready():
+    print('------')
     print('Login done.')
+    print('Name: ' + client.user.name)
+    print('ID: ' + str(client.user.id))
     for board in args.channel if args.channel else CONFIG['targets'].keys():
         await send_update(board, CONFIG['targets'][board]['discord'])
     print('Close session.')
